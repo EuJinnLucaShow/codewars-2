@@ -12,7 +12,18 @@ Note you should only return a number, the count of divisors. The numbers between
 */
 
 function getDivisorsCnt(n) {
-  // todo
+  let count = 0
+  for (let i = 1; i <= Math.sqrt(n); i++) {
+    if (n % i == 0) {
+      // i is a divisor
+      count++
+      // if n/i is a different divisor, count it too
+      if (n / i != i) {
+        count++
+      }
+    }
+  }
+  return count
 }
 
 console.log(getDivisorsCnt(1)) // 1
