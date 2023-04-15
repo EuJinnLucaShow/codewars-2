@@ -10,7 +10,7 @@ Data2: [31, 29, 43, 58, 52]
 function printHumiditiesForecast(array) {
   let str = '... '
   for (let i = 0; i < array.length; i += 1) {
-    str = str + `${array[i]}% humidity in ${i + 1} days ...`
+    str += `${array[i]}% humidity in ${i + 1} days ...`
   }
   return str
 }
