@@ -1,8 +1,8 @@
-var min = function (list) {
+const min = function (list) {
   return Math.min(...list)
 }
 
-var max = function (list) {
+const max = function (list) {
   return Math.max(...list)
 }
 
