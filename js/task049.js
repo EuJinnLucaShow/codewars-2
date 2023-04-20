@@ -9,28 +9,11 @@ comp(a, b) returns true because in b 121 is the square of 11, 14641 is the squar
 a = [121, 144, 19, 161, 19, 144, 19, 11] 
 b = [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19]*/
 
-// function comp(a, b) {
-//   if (!a || !b) {
-//     return false
-//   }
-
-//   const sortedA = a.sort((x, y) => x - y)
-//   const sortedB = b.sort((x, y) => x - y)
-
-//   for (let i = 0; i < sortedA.length; i++) {
-//     if (sortedA[i] * sortedA[i] !== sortedB[i]) {
-//       return false
-//     }
-//   }
-
-//   return true
-// }
-
 function comp(array1, array2) {
   if (array1 == null || array2 == null) return false
   array1.sort((a, b) => a - b)
   array2.sort((a, b) => a - b)
-  return array1.map(v => v * v).every((v, i) => v == array2[i])
+  return array2.map(v => Math.sqrt(v)).every((v, i) => v == array1[i])
 }
 
 const a = [121, 144, 19, 161, 19, 144, 19, 11]
